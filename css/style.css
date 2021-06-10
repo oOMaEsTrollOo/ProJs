@@ -181,6 +181,7 @@ table {
     transition: .3s ease-in;
     min-height: 380px;
     background-color: #F8F3F4;
+    margin-top: 20px;
 }
 
 .product-item:hover {
