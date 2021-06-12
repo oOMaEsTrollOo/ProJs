@@ -66,6 +66,7 @@ class ProductItem {
 
 //     delProduct()
 // }
+//
 
 let list = new ProductList();
 list.render();
