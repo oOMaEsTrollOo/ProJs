@@ -17,10 +17,10 @@ class ProductList {
 
     _fetchProducts() {
         this.goods = [
-            { id: 1, title: 'Notebook', price: 2000 },
-            { id: 2, title: 'Mouse', price: 20 },
-            { id: 3, title: 'Keyboard', price: 200 },
-            { id: 4, title: 'Gamepad', price: 50 },
+            { id: 1, title: 'notebook', price: 2000 },
+            { id: 2, title: 'mouse', price: 20 },
+            { id: 3, title: 'keyboard', price: 200 },
+            { id: 4, title: 'gamepad', price: 50 },
         ]
     }
     render() {
