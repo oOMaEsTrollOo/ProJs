@@ -128,5 +128,5 @@ class CartItem {
 let amount
 let countGoods
 let list = new ProductList();
-let cart = new ProductCart();
+// let cart = new ProductCart();
 list.render();
