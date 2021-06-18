@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/lesson3
 'use strict'
 const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses'
 
@@ -47,11 +48,39 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 // let list = new ProductList();
 // let cart = new ProductCart();
 // list.render();
+=======
+<<<<<<< HEAD
+const products = [
+    { id: 1, title: 'Notebook', price: 2000, img: 'notebook.jpg' },
+    { id: 2, title: 'Mouse', price: 20, img: 'mouse.jpg' },
+    { id: 3, title: 'Keyboard', price: 200, img: 'keyboard.jpg' },
+    { id: 4, title: 'Gamepad', price: 50, img: 'gamepad.jpg' },
+];
+//Функция для формирования верстки каждого товара
+const renderProduct = (x) => {
+    return `<div class="product-item">
+                <img src="./img/${x.img}" alt="${x.img}" width="200px" height="300px">
+                <h3 class="title">${x.title}</h3>
+                <p class="price">${x.price}</p>
+                <button class="buy-btn">Купить</button>
+            </div>`
+};
+const renderPage = list => {
+    const productsList = list.map(item => renderProduct(item));
+    console.log(productsList);
+    document.querySelector('.products').innerHTML = productsList.join(' ');
+};
+
+renderPage(products);
+=======
+'use strict'
+>>>>>>> Revert "lesson-3"
 
 class ProductList {
     constructor(container = '.products') {
         this.container = container;
         this.goods = [];
+<<<<<<< refs/remotes/origin/lesson3
         this._getProducts()
             .then(data => {
                 this.goods = [...data];
@@ -59,6 +88,10 @@ class ProductList {
             });
         this.goodsList();
         this._init();
+=======
+        this._fetchProducts();
+        this.goodsList();
+>>>>>>> Revert "lesson-3"
     }
 
     goodsList() {
@@ -68,6 +101,7 @@ class ProductList {
         }
     }
 
+<<<<<<< refs/remotes/origin/lesson3
 <<<<<<< refs/remotes/origin/lesson3
     _getProducts() {
 
@@ -98,6 +132,16 @@ class ProductList {
 >>>>>>> 123
     }
 
+=======
+    _fetchProducts() {
+        this.goods = [
+            { id: 1, title: 'Notebook', price: 2000 },
+            { id: 2, title: 'Mouse', price: 20 },
+            { id: 3, title: 'Keyboard', price: 200 },
+            { id: 4, title: 'Gamepad', price: 50 },
+        ]
+    }
+>>>>>>> Revert "lesson-3"
     render() {
         const block = document.querySelector(this.container);
         for (let product of this.goods) {
@@ -109,13 +153,20 @@ class ProductList {
 
 class ProductItem {
     constructor(product) {
+<<<<<<< refs/remotes/origin/lesson3
             this.title = product.product_name;
             this.price = product.price;
             this.id = product.id_product;
+=======
+            this.title = product.title;
+            this.price = product.price;
+            this.id = product.id;
+>>>>>>> Revert "lesson-3"
         }
         //Функция для формирования верстки каждого товара
     render() {
         return `<div class="product-item">
+<<<<<<< refs/remotes/origin/lesson3
                     <img src="./img/${this.price}.jpg" alt="${this.price}" width="200px" height="300px">
                     <h3 class="title">${this.title}</h3>
                     <p class="price">${this.price}</p>
@@ -143,3 +194,35 @@ class CartItem {
 
 let list = new ProductList();
 list.render();
+=======
+                <img src="./img/${this.title}.jpg" alt="${this.title}" width="200px" height="300px">
+                <h3 class="title">${this.title}</h3>
+                <p class="price">${this.price}</p>
+                <button class="buy-btn">Купить</button>
+            </div>`
+    }
+}
+
+// class Cart {
+//     constructor(cart1 = '.cart') {
+//         this.cart1 = cart1;
+//     }
+
+//     clearCart()
+// }
+
+// class CartItem {
+//     constructor(cartitem1 = '.cart') {
+//         this.cartitem1 = cartitem1;
+//     }
+
+//     addProduct()
+
+//     delProduct()
+// }
+//
+
+let list = new ProductList();
+list.render();
+>>>>>>> parent of d0801a4... lesson-3
+>>>>>>> Revert "lesson-3"
