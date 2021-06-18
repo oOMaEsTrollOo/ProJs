@@ -68,7 +68,6 @@ class ProductList {
         }
     }
 
-<<<<<<< HEAD
     _getProducts() {
 
         return fetch(`${API}/catalogData.json`)
@@ -87,15 +86,6 @@ class ProductList {
         let cartlist = document.querySelector(".cartlist");
         let btncart = document.querySelector(".btn-cart");
         btncart.addEventListener('click', cartopen)
-=======
-    _fetchProducts() {
-        this.goods = [
-            { id: 1, title: 'notebook', price: 2000 },
-            { id: 2, title: 'mouse', price: 20 },
-            { id: 3, title: 'keyboard', price: 200 },
-            { id: 4, title: 'gamepad', price: 50 },
-        ]
->>>>>>> master
     }
 
     render() {
